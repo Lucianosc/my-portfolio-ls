@@ -1,0 +1,17 @@
+$color: (
+  "primary": #04d9ff,
+  "background": #0e1a21,
+  "background2": #282828,
+  "text": #909096,
+);
+
+:root {
+  @each $key, $hex in $color {
+    --color-#{$key}: #{$hex};
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
