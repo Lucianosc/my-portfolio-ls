@@ -1,0 +1,21 @@
+@import "../../styles/mixins.scss";
+
+.main-container {
+  display: flex;
+  flex-direction: column-reverse;
+  flex: 1;
+  @include lg {
+    flex-direction: row;
+  }
+  .contact-form {
+    padding: 20px;
+    flex: 1;
+  }
+  .google-map {
+    flex: 1;
+    iframe {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
