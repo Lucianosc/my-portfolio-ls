@@ -2,11 +2,11 @@ import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { Home, Skills, Proyects, Contact } from './pages'
 import { SideBar } from './components'
-import './App.scss'
+import styles from './App.module.scss'
 
 function App() {
   return (
-    <div>
+    <div className={`${styles['container']}`}>
       <SideBar />
       <Routes>
         <Route path="/" element={<Home />}></Route>

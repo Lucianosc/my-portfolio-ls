@@ -3,7 +3,7 @@ import { logo } from '../../assets'
 import { LinkedInLogo, GitHubLogo } from '../../assets'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { navlinks } from '../../constants/navlinks'
-import './SideBar.scss'
+import styles from './SideBar.module.scss'
 
 export default function SideBar() {
   const navigate = useNavigate()
@@ -11,7 +11,7 @@ export default function SideBar() {
 
   return (
     <menu>
-      <div className="logo">
+      <div className={`${styles['logo']}`}>
         <div>
           <a onClick={() => navigate('/')}>
             <img src={logo} alt="logo" />
@@ -19,19 +19,19 @@ export default function SideBar() {
         </div>
         <span>Web Developer</span>
       </div>
-      <nav className="navlinks">
+      <nav className={`${styles['nav-links']}`}>
         {navlinks.map(({ name, link }) => (
           <a
             key={name}
             onClick={() => navigate(link)}
-            className={`${link === location.pathname && 'selected'}`}
+            className={`${link === location.pathname && styles['selected']}`}
           >
             {name}
           </a>
         ))}
       </nav>
 
-      <div className="socialmedia">
+      <div className={`${styles['social-media']}`}>
         <a
           href="https://linkedin.com/in/luciano-scaminaci-605132220/"
           target="_blank"
