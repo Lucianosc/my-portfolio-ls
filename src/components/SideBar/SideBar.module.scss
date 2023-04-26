@@ -1,9 +1,13 @@
 @import "../../styles/mixins.scss";
 
 menu {
-  position: relative;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: sticky;
   margin: 0;
   padding: 0;
+  z-index: 2;
   .mobile-nav {
     @include lg {
       visibility: hidden;
@@ -15,7 +19,7 @@ menu {
         right: 10px;
         width: 50px;
         height: 50px;
-        z-index: 2;
+
         background-color: rgba(0, 0, 0, 0.3);
         display: -webkit-box;
         display: -ms-flexbox;
@@ -32,18 +36,18 @@ menu {
     }
   }
   .side-nav {
+    z-index: 10;
+    height: 100%;
     display: flex;
     background-color: var(--color-background);
-    height: 100vh;
     flex-direction: column;
     justify-content: space-between;
     top: 0;
     left: 0;
     position: fixed;
-    z-index: 10;
     width: 260px;
     transition: all 0.6s cubic-bezier(0.65, 0, 0.35, 1);
-    transform: translate(-100vw, 0);
+    transform: translate(-260px, 0);
     @include lg {
       transform: translate(0);
       width: 160px;
@@ -58,8 +62,10 @@ menu {
       justify-content: center;
       align-items: center;
       div {
-        width: 130px;
-        padding: 1rem;
+        box-sizing: border-box;
+        max-width: 180px;
+        width: 100%;
+        padding: 1.5rem;
         a {
           display: block;
           img {
@@ -127,5 +133,8 @@ menu {
     background-color: rgba(0, 0, 0, 0.6);
     width: 100vw;
     height: 100vh;
+    @include lg {
+      visibility: hidden;
+    }
   }
 }
