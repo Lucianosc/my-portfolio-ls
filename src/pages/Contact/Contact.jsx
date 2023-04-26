@@ -14,53 +14,55 @@ export default function Contact() {
   return (
     <div className={`${styles['main-container']}`}>
       <div className={`${styles['contact-section']}`}>
-        <h2>Contact me</h2>
-        <p>
-          Are you in need of a <span>front-end developer</span> who can bring
-          your vision to life? Whether you're looking for full-time support, a
-          freelancer, or have any other requests, don't hesitate to use the
-          form.
-        </p>
-        <div className={`${styles['form-container']}`}>
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <div className={`${styles['form-top']}`}>
+        <div className={`${styles['contact-wrapper']}`}>
+          <h2>Contact me</h2>
+          <p>
+            Are you in need of a <span>front-end developer</span> who can bring
+            your vision to life? Whether you're looking for full-time support, a
+            freelancer, or have any other requests, don't hesitate to use the
+            form.
+          </p>
+          <div className={`${styles['form-container']}`}>
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <div className={`${styles['form-top']}`}>
+                <input
+                  className={`${errors?.name && styles['error']}`}
+                  placeholder="Name"
+                  {...register('name', { required: true })}
+                  onError={() => toast('Wow so easy !')}
+                />
+                <input
+                  className={`${errors?.email && styles['error']}`}
+                  placeholder="Email"
+                  {...register('email', {
+                    required: true,
+                    pattern: /^\S+@\S+\.\S+$/,
+                  })}
+                />
+              </div>
               <input
-                className={`${errors?.name && styles['error']}`}
-                placeholder="Name"
-                {...register('name', { required: true })}
-                onError={() => toast('Wow so easy !')}
+                className={`${errors?.subject && styles['error']}`}
+                placeholder="Subject"
+                {...register('subject', { required: true })}
               />
-              <input
-                className={`${errors?.email && styles['error']}`}
-                placeholder="Email"
-                {...register('email', {
-                  required: true,
-                  pattern: /^\S+@\S+\.\S+$/,
-                })}
+              <textarea
+                rows="5"
+                className={`${errors?.message && styles['error']}`}
+                placeholder="Message"
+                {...register('message', { required: true })}
               />
-            </div>
-            <input
-              className={`${errors?.subject && styles['error']}`}
-              placeholder="Subject"
-              {...register('subject', { required: true })}
-            />
-            <textarea
-              rows="4"
-              className={`${errors?.message && styles['error']}`}
-              placeholder="Message"
-              {...register('message', { required: true })}
-            />
-            <div className={`${styles['error-message']}`}>
-              {Object.keys(errors).length > 0 ? (
-                <p>Please complete required fields correctly</p>
-              ) : (
-                ''
-              )}
-            </div>
-            <div>
-              <input type="submit" id={`${styles['submit']}`} value="Send!" />
-            </div>
-          </form>
+              <div className={`${styles['error-message']}`}>
+                {Object.keys(errors).length > 0 ? (
+                  <p>Please complete required fields correctly</p>
+                ) : (
+                  ''
+                )}
+              </div>
+              <div>
+                <input type="submit" id={`${styles['submit']}`} value="Send!" />
+              </div>
+            </form>
+          </div>
         </div>
       </div>
       <div className={`${styles['google-map']}`}>
