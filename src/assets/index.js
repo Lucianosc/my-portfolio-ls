@@ -4,3 +4,4 @@ export { logo };
 
 export { default as GitHubLogo } from "./GitHubLogo.jsx";
 export { default as LinkedInLogo } from "./LinkedInLogo.jsx";
+export { default as HamburgerMenu } from "./HamburgerMenu.jsx";
