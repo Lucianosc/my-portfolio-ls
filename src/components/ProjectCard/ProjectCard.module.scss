@@ -1,0 +1,48 @@
+.project-card {
+  position: relative;
+  width: calc(calc(100% / 3) - 1rem);
+  //   min-width: 340px;
+  height: 340px;
+  overflow: hidden;
+  cursor: pointer;
+  &:hover img {
+    transform: scale(1.2);
+  }
+  &:hover button {
+    z-index: 15;
+    transform: scale(1);
+  }
+  button {
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+    padding: 0;
+    z-index: -1;
+    position: absolute;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+    margin: 0 auto;
+    transform: translate(-50%, -50%) scale(0);
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--color-background);
+    background-color: var(--color-primary);
+    font-size: 14px;
+    border: none;
+    text-transform: uppercase;
+    transform: scale(0);
+    transition: all cubic-bezier(0.68, -0.6, 0.32, 1.6) 0.3s;
+    line-height: 20px;
+    &:active{
+      transform: scale(1.1);
+    }
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all ease-in-out 0.3s;
+  }
+}
