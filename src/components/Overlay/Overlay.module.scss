@@ -1,0 +1,20 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    -45deg,
+    #2e2e2e 6.25%,
+    #000000 6.25%,
+    #000000 50%,
+    #2e2e2e 50%,
+    #2e2e2e 56.25%,
+    #000000 56.25%,
+    #000000 100%
+  );
+  background-size: 8px 8px;
+  opacity: 0.7;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+}
