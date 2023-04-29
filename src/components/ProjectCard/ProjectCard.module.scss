@@ -33,11 +33,8 @@
     border: none;
     text-transform: uppercase;
     transform: scale(0);
-    transition: all cubic-bezier(0.68, -0.6, 0.32, 1.6) 0.3s;
+    transition: all ease-in-out 0.3s;
     line-height: 20px;
-    &:active{
-      transform: scale(1.1);
-    }
   }
   img {
     width: 100%;

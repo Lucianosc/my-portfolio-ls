@@ -5,11 +5,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 4rem;
+  gap: 2rem;
 
   .projects {
     width: 100%;
     max-width: 1440px;
+    padding-bottom: 2rem;
     h1 {
       font-size: 2rem;
       text-align: center;
