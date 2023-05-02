@@ -1,3 +1,5 @@
+@import "../../styles/mixins.scss";
+
 .main-container {
   background-color: var(--color-background3);
   padding: 0 2rem;
@@ -5,7 +7,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 2rem;
+  @include xl {
+    gap: 6rem;
+  }
 
   .projects {
     width: 100%;
@@ -21,7 +27,11 @@
     .projects-list {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: center;
+      @include md {
+        justify-content: flex-start;
+      }
+      align-items: center;
       gap: 1rem;
     }
   }

@@ -42,7 +42,7 @@ export default function Projects() {
       {showModal && (
         <>
           <div ref={modalRef}>
-            <Modal projectData={projectData} />
+            <Modal projectData={projectData} handleClick={() => setShowModal(false)}/>
           </div>
           <Overlay handleClick={() => setShowModal(false)} />
         </>

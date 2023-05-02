@@ -1,7 +1,15 @@
+@import "../../styles/mixins.scss";
+
 .project-card {
   position: relative;
-  width: calc(calc(100% / 3) - 1rem);
-  //   min-width: 340px;
+  width: 100%;
+  @include md {
+    width: calc(calc(100% / 2) - 0.5rem);
+  }
+  @include xl {
+    width: calc(calc(100% / 3) - 1rem);
+  }
+  max-width: 480px;
   height: 340px;
   overflow: hidden;
   cursor: pointer;
@@ -9,7 +17,7 @@
     transform: scale(1.2);
   }
   &:hover button {
-    z-index: 15;
+    z-index: 5;
     transform: scale(1);
   }
   button {
