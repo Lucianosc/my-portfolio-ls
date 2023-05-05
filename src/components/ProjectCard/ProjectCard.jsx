@@ -3,7 +3,7 @@ import styles from "./ProjectCard.module.scss";
 
 export default function ProjectCard({
   handleClick,
-  project: { id, image, description, title },
+  project: { id, images, description, title },
 }) {
   return (
     <div
@@ -12,7 +12,7 @@ export default function ProjectCard({
       onClick={() => handleClick()}
     >
       <button>view project</button>
-      <img src={image} alt={title} />
+      <img src={images[0]} alt={title} />
       {/* <div className={`${styles['project-info']}`}>
         <h2>{title}</h2>
         <p>{description}</p>

@@ -4,7 +4,7 @@ import { CloseIcon } from "../../assets";
 
 export default function Modal({
   handleClick,
-  projectData: { id, title, description, image, link },
+  projectData: { id, title, description, images, link },
 }) {
   // console.log(projectData)
   return (
@@ -13,10 +13,10 @@ export default function Modal({
         <CloseIcon />
       </button>
       <div className={`${styles["img-container"]}`}>
-        <img src={image} />
+        <img src={images[1]} />
         {link && (
           <a target="_blank" href={link}>
-            Visit Website
+            Visit Project
           </a>
         )}
       </div>
