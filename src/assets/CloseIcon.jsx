@@ -10,8 +10,8 @@ export default function CloseIcon() {
       fill="none"
       stroke="currentColor"
       strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      strokeLinecap="square"
+      strokeLinejoin="square"
     >
       <circle cx="12" cy="12" r="10" />
       <line x1="15" y1="9" x2="9" y2="15" />
