@@ -11,6 +11,7 @@ import imageDraw2 from "./projects-images/imageDraw-2.png";
 import imageDraw3 from "./projects-images/imageDraw-3.png";
 import wildWestRunner1 from "./projects-images/wildWestRunner-1.png";
 import wildWestRunner2 from "./projects-images/wildWestRunner-2.png";
+import techGuy from "./about-image/tech-guy.png";
 
 export {
   cuatroEnLinea1,
@@ -26,6 +27,7 @@ export {
   vetRedFigma,
   vetRedProfile,
   vetRedChat,
+  techGuy,
 };
 
 export { default as GitHubLogo } from "./GitHubLogo.jsx";
