@@ -1,3 +1,79 @@
-.main-container{
-    padding: 90px 30px;
+@import "../../styles/mixins.scss";
+
+.main-container {
+  padding: 90px 30px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  @include xl {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  background-color: var(--color-background3);
+  gap: 2rem;
+  .wrapper {
+    margin: 0 auto;
+    max-width: 460px;
+    justify-content: center;
+    width: 100%;
+    @include md {
+      max-width: 540px;
+    }
+    @include xl {
+      width: 50%;
+      max-width: 900px;
+    }
+    .imgs-container {
+      position: relative;
+      aspect-ratio: 35/44;
+      .spinner-container {
+        position: absolute;
+        top: -3%;
+        left: 7%;
+        color: whitesmoke;
+        width: 60%;
+        animation-name: spin;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-duration: 20s;
+      }
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  section {
+    margin: 0 auto;
+    width: 100%;
+    @include xl {
+      width: 50%;
+    }
+    max-width: 550px;
+    span {
+      color: var(--color-primary);
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 4rem;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.5rem;
+    }
+  }
 }
