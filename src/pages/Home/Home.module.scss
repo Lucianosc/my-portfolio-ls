@@ -1,7 +1,7 @@
 @import "../../styles/mixins.scss";
 
 .main-container {
-  padding: 90px 30px;
+  padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -23,6 +23,9 @@
     @include xl {
       width: 50%;
       max-width: 900px;
+    }
+    @include md {
+      max-width: 540px;
     }
     .imgs-container {
       position: relative;
