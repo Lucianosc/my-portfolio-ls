@@ -14,7 +14,7 @@ export default function Projects() {
   };
 
   return (
-    <div className={`${styles["main-container"]}`}>
+    <main className={`${styles["main-container"]}`}>
       <div className={`${styles["projects"]}`}>
         <h1>Projects</h1>
         <div className={`${styles["projects-list"]}`}>
@@ -28,7 +28,7 @@ export default function Projects() {
         </div>
       </div>
       <div className={`${styles["projects"]}`}>
-        <h1>University projects</h1>
+        <h1>College projects</h1>
         <div className={`${styles["projects-list"]}`}>
           {uniProjects.map((project) => (
             <ProjectCard
@@ -47,6 +47,6 @@ export default function Projects() {
           <Overlay handleClick={() => setShowModal(false)} />
         </>
       )}
-    </div>
+    </main>
   );
 }
