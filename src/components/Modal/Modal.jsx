@@ -6,7 +6,6 @@ export default function Modal({
   handleClick,
   projectData: { id, title, description, images, link },
 }) {
-  // console.log(projectData)
   return (
     <div className={`${styles["container"]}`}>
       <button onClick={() => handleClick()}>
