@@ -26,8 +26,8 @@ export default function SideBar() {
   // }
 
   return (
-    <menu>
-      {/* mobile nav */}
+    <nav>
+      {/* hamburger menu */}
       <div className={`${styles["mobile-nav"]}`}>
         <div className={`${styles["hamburger-container"]}`}>
           <a onClick={() => setToggleDrawer((prev) => !prev)}>
@@ -36,7 +36,7 @@ export default function SideBar() {
         </div>
       </div>
 
-      {/* desktop nav */}
+      {/* nav bar */}
       <div
         className={`${styles["side-nav"]} ${toggleDrawer && styles["toggled"]}`}
         ref={drawerRef}
@@ -77,6 +77,6 @@ export default function SideBar() {
       </div>
       {/* Overlay*/}
       {toggleDrawer && <Overlay handleClick={() => setToggleDrawer(false)} />}
-    </menu>
+    </nav>
   );
 }

@@ -1,6 +1,6 @@
 @import "../../styles/mixins.scss";
 
-menu {
+nav {
   height: 100vh;
   top: 0;
   left: 0;
@@ -19,7 +19,6 @@ menu {
         right: 10px;
         width: 50px;
         height: 50px;
-
         background-color: rgba(0, 0, 0, 0.3);
         display: -webkit-box;
         display: -ms-flexbox;
@@ -105,6 +104,7 @@ menu {
           border-bottom: 2px solid var(--color-primary);
           color: var(--color-primary);
           width: 60%;
+          letter-spacing: 1px;
           @include lg {
             width: 80%;
           }
