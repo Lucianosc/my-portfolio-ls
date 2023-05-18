@@ -12,6 +12,17 @@ $color: (
   @each $key, $hex in $color {
     --color-#{$key}: #{$hex};
   }
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #B3B3B6;
+    // border-radius: 1px;
+  }
+  background-color: #1d1d1d;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
