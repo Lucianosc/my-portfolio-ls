@@ -115,10 +115,10 @@ export default function Home() {
         </div>
       </div>
       <section>
-        <h2>
-          I'm Luciano a <span>front-end</span> developer and a creative
+        <h1>
+          I'm Luciano, a <span>front-end</span> developer and a creative
           problem-solver.
-        </h2>
+        </h1>
         <p>
           My focus lies in crafting elegant solutions for complex challenges.
           With a blend of technical expertise and design sensibilities, I create

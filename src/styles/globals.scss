@@ -19,7 +19,7 @@ $color: (
     background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    background: #B3B3B6;
+    background: #b3b3b6;
     // border-radius: 1px;
   }
   background-color: #1d1d1d;
@@ -29,8 +29,23 @@ $color: (
 
 body {
   font-family: "Montserrat", sans-serif;
+  h1 {
+    font-size: 3rem;
+    font-weight: normal;
+  }
+  h2 {
+    font-size: 2.25rem;
+    font-weight: normal;
+  }
+  h3 {
+    font-size: 1.5rem;
+    font-weight: medium;
+  }
   p {
     font-family: "Hind", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.5px;
   }
   font-weight: 500;
   margin: 0;
