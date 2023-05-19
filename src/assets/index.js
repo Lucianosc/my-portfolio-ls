@@ -12,6 +12,12 @@ import imageDraw3 from "./projects-images/imageDraw-3.png";
 import wildWestRunner1 from "./projects-images/wildWestRunner-1.png";
 import wildWestRunner2 from "./projects-images/wildWestRunner-2.png";
 import techGuy from "./about-image/tech-guy.png";
+import css3 from "./icons/css3.svg";
+import html5 from "./icons/html5.svg";
+import javascript from "./icons/javascript.svg";
+import reactjs from "./icons/reactjs.svg";
+import sass from "./icons/sass.svg";
+import tailwindcss from "./icons/tailwindcss.svg";
 
 export {
   cuatroEnLinea1,
@@ -28,6 +34,12 @@ export {
   vetRedProfile,
   vetRedChat,
   techGuy,
+  css3,
+  html5,
+  javascript,
+  reactjs,
+  sass,
+  tailwindcss,
 };
 
 export { default as GitHubLogo } from "./GitHubLogo.jsx";
