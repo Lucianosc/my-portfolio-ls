@@ -15,15 +15,13 @@
 
   .projects {
     width: 100%;
-    max-width: 1412px;
+    max-width: 1440px;
     padding-bottom: 2rem;
 
     .projects-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      align-items: center;
-      gap: 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      grid-gap: 1.5rem;
     }
   }
 }
