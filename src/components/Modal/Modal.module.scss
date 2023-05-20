@@ -2,23 +2,24 @@
 
 .modal-container {
   position: fixed;
-  top: 50%;
+  top: calc(50% + 3rem);
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 15;
   height: 100%;
-  max-width: 760px;
+  width: 100%;
+  padding: 3rem 2.5rem;
   @include md {
+    max-width: 670px;
     width: max-content;
   }
   .modal {
-    margin: 3rem 2rem;
     display: flex;
     flex-direction: column;
     background-color: var(--color-background3);
-    overflow-y: auto;
     width: fit-content;
     max-height: calc(100% - 4rem);
+    overflow-y: auto;
     .img-container {
       display: flex;
       justify-content: center;
@@ -59,8 +60,12 @@
   }
   .btn-close {
     position: absolute;
-    top: 1rem;
-    right: 0;
+    top: 10px;
+    right: 50px;
+    @include md {
+      top: 1rem;
+      right: 0.5rem;
+    }
     color: whitesmoke;
     border: none;
     padding: 0;

@@ -7,8 +7,14 @@ export default function Modal({
   projectData: { id, title, description, images, link },
 }) {
   return (
-    <div className={`${styles["modal-container"]}`}>
-      <div className={`${styles["modal"]}`}>
+    <div
+      className={`${styles["modal-container"]}`}
+      onClick={() => handleClick()}
+    >
+      <div
+        className={`${styles["modal"]}`}
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className={`${styles["img-container"]}`}>
           <img src={images[1]} />
         </div>
