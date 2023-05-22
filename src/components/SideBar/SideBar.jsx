@@ -1,38 +1,23 @@
 import React, { useState, useEffect, useRef } from "react";
 import { LinkedInLogo, GitHubLogo, HamburgerMenu, logo } from "../../assets";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation, NavLink, Link } from "react-router-dom";
 import { navlinks } from "../../constants/navlinks";
 import styles from "./SideBar.module.scss";
 import Overlay from "../Overlay/Overlay";
 
 export default function SideBar() {
-  const navigate = useNavigate();
   const location = useLocation();
   const drawerRef = useRef();
   const [toggleDrawer, setToggleDrawer] = useState(false);
-
-  // useEffect(() => {
-  //   document.addEventListener('click', handleClickOutsideDrawer, true)
-
-  //   return () => {
-  //     document.removeEventListener('click', handleClickOutsideDrawer, true)
-  //   }
-  // }, [toggleDrawer])
-
-  // const handleClickOutsideDrawer = (e) => {
-  //   if (toggleDrawer && !drawerRef.current.contains(e.target)) {
-  //     setToggleDrawer(false)
-  //   }
-  // }
 
   return (
     <nav>
       {/* hamburger menu */}
       <div className={`${styles["mobile-nav"]}`}>
         <div className={`${styles["hamburger-container"]}`}>
-          <a onClick={() => setToggleDrawer((prev) => !prev)}>
+          <button onClick={() => setToggleDrawer((prev) => !prev)}>
             <HamburgerMenu width="32px" height="32px" />
-          </a>
+          </button>
         </div>
       </div>
 
@@ -43,36 +28,36 @@ export default function SideBar() {
       >
         <div className={`${styles["logo"]}`}>
           <div>
-            <a onClick={() => navigate("/")}>
+            <NavLink to="/">
               <img src={logo} alt="logo" />
-            </a>
+            </NavLink>
           </div>
           <span>Web Developer</span>
         </div>
         <nav className={`${styles["nav-links"]}`}>
           {navlinks.map(({ name, link }) => (
-            <a
+            <NavLink
               key={name}
               onClick={() => {
-                navigate(link);
                 setToggleDrawer(false);
               }}
+              to={link}
               className={`${link === location.pathname && styles["selected"]}`}
             >
               {name}
-            </a>
+            </NavLink>
           ))}
         </nav>
         <div className={`${styles["social-media"]}`}>
-          <a
-            href="https://linkedin.com/in/luciano-scaminaci-605132220/"
+          <Link
+            to="https://linkedin.com/in/luciano-scaminaci-605132220/"
             target="_blank"
           >
             <LinkedInLogo width="20px" height="20px" />
-          </a>
-          <a href="https://github.com/Lucianosc" target="_blank">
+          </Link>
+          <Link to="https://github.com/Lucianosc" target="_blank">
             <GitHubLogo width="20px" height="20px" />
-          </a>
+          </Link>
         </div>
       </div>
       {/* Overlay*/}

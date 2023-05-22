@@ -8,12 +8,15 @@ nav {
   margin: 0;
   padding: 0;
   z-index: 2;
+  a {
+    text-decoration: none;
+  }
   .mobile-nav {
     @include lg {
       visibility: hidden;
     }
     .hamburger-container {
-      a {
+      button {
         position: fixed;
         top: 10px;
         right: 10px;
@@ -31,6 +34,8 @@ nav {
         justify-content: center;
         border-radius: 3px;
         color: white;
+        background-color: transparent;
+        border: none;
       }
     }
   }
