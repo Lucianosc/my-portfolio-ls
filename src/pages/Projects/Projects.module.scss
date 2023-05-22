@@ -2,13 +2,17 @@
 
 .main-container {
   background-color: var(--color-background3);
-  padding: 0 2rem;
+
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  padding: 0 1rem;
+  @include md {
+    padding: 0 2rem;
+  }
   @include xl {
     gap: 6rem;
   }

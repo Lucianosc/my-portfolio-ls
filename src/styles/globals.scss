@@ -1,3 +1,5 @@
+@import "./mixins.scss";
+
 $color: (
   "primary": #04d9ff,
   "secondary": #ff8a1a,
@@ -30,16 +32,25 @@ $color: (
 body {
   font-family: "Montserrat", sans-serif;
   h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: normal;
+    @include md {
+      font-size: 3rem;
+    }
   }
   h2 {
-    font-size: 2.25rem;
+    font-size: 2rem;
     font-weight: normal;
+    @include md {
+      font-size: 2.25rem;
+    }
   }
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: medium;
+    @include md {
+      font-size: 1.5rem;
+    }
   }
   p {
     font-family: "Hind", sans-serif;
