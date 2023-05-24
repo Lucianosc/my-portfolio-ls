@@ -65,19 +65,21 @@ nav {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding: 1rem;
       div {
         box-sizing: border-box;
         max-width: 180px;
         width: 100%;
-        padding: 1.5rem;
         a {
           display: block;
+          color: var(--color-primary);
           img {
             width: 100%;
           }
         }
       }
       span {
+        margin: 1rem 0;
         color: var(--color-text);
         text-align: center;
         font-size: 14px;

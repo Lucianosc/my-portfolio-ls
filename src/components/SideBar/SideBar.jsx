@@ -15,7 +15,10 @@ export default function SideBar() {
       {/* hamburger menu */}
       <div className={`${styles["mobile-nav"]}`}>
         <div className={`${styles["hamburger-container"]}`}>
-          <button onClick={() => setToggleDrawer((prev) => !prev)}>
+          <button
+            onClick={() => setToggleDrawer((prev) => !prev)}
+            aria-label="mobile menu"
+          >
             <HamburgerMenu width="32px" height="32px" />
           </button>
         </div>
@@ -28,7 +31,7 @@ export default function SideBar() {
       >
         <div className={`${styles["logo"]}`}>
           <div>
-            <NavLink to="/">
+            <NavLink to="/" aria-label="About">
               <img src={logo} alt="logo" />
             </NavLink>
           </div>
@@ -52,10 +55,17 @@ export default function SideBar() {
           <Link
             to="https://linkedin.com/in/luciano-scaminaci-605132220/"
             target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn Profile"
           >
             <LinkedInLogo width="20px" height="20px" />
           </Link>
-          <Link to="https://github.com/Lucianosc" target="_blank">
+          <Link
+            to="https://github.com/Lucianosc"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub Profile"
+          >
             <GitHubLogo width="20px" height="20px" />
           </Link>
         </div>

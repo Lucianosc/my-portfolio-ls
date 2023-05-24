@@ -29,6 +29,8 @@
         object-fit: contain;
         width: 100%;
         margin-bottom: 1rem;
+        aspect-ratio: 16/10;
+        background-color: lightgray;
       }
     }
     a {
