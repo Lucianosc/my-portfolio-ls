@@ -80,7 +80,13 @@ export const RadarOptions = {
 export default function Skills() {
   return (
     <main className={`${styles["main-container"]}`}>
-      <section>Texto</section>
+      <section>
+        <ul>
+          <li>Team oriented</li>
+          <li>Atention to detail</li>
+          <li>responsive design</li>
+        </ul>
+      </section>
       <div className={`${styles["graph-container"]}`}>
         <h2>Tech Stack</h2>
         <div className={`${styles["radar-container"]}`}>
