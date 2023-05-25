@@ -7,9 +7,6 @@ import {
   reactjs,
   sass,
   tailwindcss,
-  attentionToDetail,
-  responsiveDesign,
-  teamOriented,
   lottieAnimation,
 } from "../../assets/";
 import {
