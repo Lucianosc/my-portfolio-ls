@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import styles from "./Skills.module.scss";
 import {
   css3,
@@ -7,6 +7,10 @@ import {
   reactjs,
   sass,
   tailwindcss,
+  attentionToDetail,
+  responsiveDesign,
+  teamOriented,
+  lottieAnimation,
 } from "../../assets/";
 import {
   Chart as ChartJS,
@@ -18,6 +22,7 @@ import {
   Legend,
 } from "chart.js";
 import { Radar } from "react-chartjs-2";
+import { Player } from "@lottiefiles/react-lottie-player";
 
 ChartJS.register(
   RadialLinearScale,
@@ -29,7 +34,7 @@ ChartJS.register(
 );
 
 export const RadarData = {
-  labels: ["React.js", "Javascript", "HTML", "Sass", "Tailwindcss", "CSS"],
+  labels: ["Javascript", "React", "HTML", "Tailwindcss", "Sass", "CSS"],
   datasets: [
     {
       label: "Tech stack",
@@ -39,7 +44,7 @@ export const RadarData = {
       poingBorderColor: "rgba(4, 217, 255, 1)",
       pointHoverBackgroundColor: "rgba(4, 217, 255, 1)",
       pointHoverBorderColor: "rgba(4, 217, 255, 1)",
-      data: [10, 9, 7, 8, 4, 8],
+      data: [10, 9, 7, 5, 8, 8],
     },
   ],
 };
@@ -78,14 +83,39 @@ export const RadarOptions = {
 };
 
 export default function Skills() {
+  const lottieRef = useRef();
+
+  const handleLottieEvent = () => {
+    if (lottieRef?.current.state.instance.playDirection == 1) {
+      lottieRef.current.setPlayerDirection(-1);
+      lottieRef.current.setSeeker(90, true);
+    } else {
+      lottieRef.current.setPlayerDirection(1);
+      lottieRef.current.setSeeker(0, true);
+    }
+  };
+
   return (
     <main className={`${styles["main-container"]}`}>
-      <section>
-        <ul>
-          <li>Team oriented</li>
-          <li>Atention to detail</li>
-          <li>responsive design</li>
-        </ul>
+      <section className={`${styles["skills"]}`}>
+        <div className={`${styles["text"]}`}>
+          <h3>Responsive design</h3>
+          <h3>Team oriented</h3>
+          <h3>Attention to detail</h3>
+        </div>
+        <div className={`${styles["player"]}`}>
+          <Player
+            ref={lottieRef}
+            onEvent={(event) => {
+              if (event === "loop") handleLottieEvent();
+            }}
+            autoplay={true}
+            loop={true}
+            controls={false}
+            src={lottieAnimation}
+            style={{ width: "100%", aspectRatio: "1/1" }}
+          ></Player>
+        </div>
       </section>
       <div className={`${styles["graph-container"]}`}>
         <h2>Tech Stack</h2>
