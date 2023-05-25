@@ -18,6 +18,7 @@ import reactjs from "./icons/reactjs.svg";
 import sass from "./icons/sass.svg";
 import tailwindcss from "./icons/tailwindcss.svg";
 import logo from "./logo.svg";
+import lottieAnimation from "./lottie-animation.json";
 
 export {
   cuatroEnLinea1,
@@ -40,9 +41,11 @@ export {
   sass,
   tailwindcss,
   logo,
+  lottieAnimation,
 };
 
 export { default as GitHubLogo } from "./GitHubLogo.jsx";
 export { default as LinkedInLogo } from "./LinkedInLogo.jsx";
 export { default as HamburgerMenu } from "./HamburgerMenu.jsx";
 export { default as CloseIcon } from "./CloseIcon.jsx";
+export { default as Spin } from "./spin.jsx";

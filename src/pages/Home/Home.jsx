@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import styles from "./Home.module.scss";
-import {
-  techGuy,
-} from "../../assets";
+import { techGuy, Spin } from "../../assets";
 
 export default function Home() {
   const [transformPosition, setTransformPosition] = useState({
@@ -29,7 +27,7 @@ export default function Home() {
     // setAnimationSpeed(
     // console.log(
     //   Math.round(
-        
+
     //       (Math.abs(
     //         ((divRef.current.offsetLeft +
     //           divRef.current.offsetWidth / 2 -
@@ -85,21 +83,7 @@ export default function Home() {
             }}
           >
             <div className={`${styles["spinner-container"]}`}>
-              <svg
-                viewBox="0 0 472 471"
-                shapeRendering="geometricPrecision"
-                textRendering="geometricPrecision"
-              >
-                <path
-                  d="M249.991,467.581c128.175-7.707,225.833-117.862,218.126-246.036C460.41,93.37,350.256,-4.28811,222.081,3.4192s-225.83299,117.8618-218.12569,246.0358C11.6626,377.63,121.817,475.288,249.991,467.581Z"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeDasharray="18.66,18.66"
-                />
-              </svg>
+              <Spin />
             </div>
           </div>
           <img
