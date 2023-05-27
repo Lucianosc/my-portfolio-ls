@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Contact.module.scss";
 import { useForm, Controller } from "react-hook-form";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
@@ -12,8 +12,10 @@ export default function Contact() {
     control,
     formState: { errors },
   } = useForm();
+  const [captchaToken, setCaptchaToken] = useState();
 
   const onSubmit = async (data) => {
+    if (!captchaToken) return;
     try {
       const contactMeResponse = fetch("https://formspree.io/f/mwkjjrog", {
         method: "POST",
@@ -31,11 +33,6 @@ export default function Contact() {
       console.log(error);
     }
   };
-
-  const handleCaptchaVerify = (token) => {
-    console.log("hCaptcha token:", token);
-  };
-
   return (
     <main className={`${styles["main-container"]}`}>
       <section className={`${styles["contact-section"]}`}>
@@ -76,17 +73,17 @@ export default function Contact() {
                 {...register("message", { required: true })}
               />
               <HCaptcha
-                sitekey="781f8366-e5be-4ee4-aaff-0153091e234e"
-                onVerify={handleCaptchaVerify}
+                theme="dark"
+                sitekey={import.meta.env.VITE_HCAPTCHA_SITEKEY}
+                onVerify={(token) => setCaptchaToken(token)}
                 onError={(error) => console.log("hCaptcha error:", error)}
               />
               <div className={`${styles["error-message"]}`}>
-                {Object.keys(errors).length > 0 ? (
+                {Object.keys(errors).length > 0 && (
                   <p>Please complete required fields correctly</p>
-                ) : (
-                  ""
                 )}
               </div>
+
               <div>
                 <input type="submit" id={`${styles["submit"]}`} value="Send!" />
               </div>
