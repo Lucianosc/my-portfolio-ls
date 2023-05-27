@@ -1,15 +1,40 @@
 import React, { useEffect } from "react";
 import styles from "./Contact.module.scss";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Contact() {
   const {
     register,
     handleSubmit,
-    watch,
+    control,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+
+  const onSubmit = async (data) => {
+    try {
+      const contactMeResponse = fetch("https://formspree.io/f/mwkjjrog", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      toast.promise(contactMeResponse, {
+        pending: "We are processing your request",
+        success: "All done, thank you for reaching out!",
+        error: "Ups, something went wrong try again later!",
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleCaptchaVerify = (token) => {
+    console.log("hCaptcha token:", token);
+  };
 
   return (
     <main className={`${styles["main-container"]}`}>
@@ -27,9 +52,8 @@ export default function Contact() {
               <div className={`${styles["form-top"]}`}>
                 <input
                   className={`${errors?.name && styles["error"]}`}
-                  placeholder="Name"
+                  placeholder="Full name"
                   {...register("name", { required: true })}
-                  onError={() => toast("Wow so easy !")}
                 />
                 <input
                   className={`${errors?.email && styles["error"]}`}
@@ -50,6 +74,11 @@ export default function Contact() {
                 className={`${errors?.message && styles["error"]}`}
                 placeholder="Message"
                 {...register("message", { required: true })}
+              />
+              <HCaptcha
+                sitekey="781f8366-e5be-4ee4-aaff-0153091e234e"
+                onVerify={handleCaptchaVerify}
+                onError={(error) => console.log("hCaptcha error:", error)}
               />
               <div className={`${styles["error-message"]}`}>
                 {Object.keys(errors).length > 0 ? (
@@ -74,6 +103,18 @@ export default function Contact() {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover={false}
+        theme="dark"
+      />
     </main>
   );
 }
