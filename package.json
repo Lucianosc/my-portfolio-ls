@@ -9,7 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@hcaptcha/react-hcaptcha": "^1.8.1",
     "@lottiefiles/react-lottie-player": "^3.5.3",
     "chart.js": "^4.3.0",
     "react": "^18.2.0",

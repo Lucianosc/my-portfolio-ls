@@ -77,13 +77,11 @@
               border-bottom-color: var(--color-primary);
             }
           }
-          iframe {
-            margin-top: 1rem;
-          }
           #submit {
             border: 1px solid var(--color-primary);
             background-color: transparent;
-            // margin-left: auto;
+            margin-top: 1rem;
+            margin-left: auto;
             cursor: pointer;
             color: var(--color-primary);
             font-size: 16px;

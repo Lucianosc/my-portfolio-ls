@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Contact.module.scss";
 import { useForm, Controller } from "react-hook-form";
-import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -12,10 +11,8 @@ export default function Contact() {
     control,
     formState: { errors },
   } = useForm();
-  const [captchaToken, setCaptchaToken] = useState();
 
   const onSubmit = async (data) => {
-    if (!captchaToken) return;
     try {
       const contactMeResponse = fetch("https://formspree.io/f/mwkjjrog", {
         method: "POST",
@@ -33,6 +30,7 @@ export default function Contact() {
       console.log(error);
     }
   };
+
   return (
     <main className={`${styles["main-container"]}`}>
       <section className={`${styles["contact-section"]}`}>
@@ -72,12 +70,14 @@ export default function Contact() {
                 placeholder="Message"
                 {...register("message", { required: true })}
               />
-              <HCaptcha
+              {/* <HCaptcha
                 theme="dark"
                 sitekey={import.meta.env.VITE_HCAPTCHA_SITEKEY}
                 onVerify={(token) => setCaptchaToken(token)}
                 onError={(error) => console.log("hCaptcha error:", error)}
-              />
+                size="normal" // o compact?
+                style={{ borderRadius: 0, borderColor: "transparent" }}
+              /> */}
               <div className={`${styles["error-message"]}`}>
                 {Object.keys(errors).length > 0 && (
                   <p>Please complete required fields correctly</p>
