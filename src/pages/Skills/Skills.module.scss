@@ -10,7 +10,7 @@
   gap: 2rem;
   flex-direction: column;
   @include lg {
-    flex-direction: row;
+    flex-direction: row-reverse;
   }
   .skills {
     width: 50%;
