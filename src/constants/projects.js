@@ -11,6 +11,9 @@ import {
   vetRedFigma,
   vetRedProfile,
   vetRedChat,
+  lamutual,
+  growpro,
+  eleco,
 } from "../assets";
 
 export const projects = [
@@ -24,23 +27,42 @@ export const projects = [
   },
   {
     id: 2,
-    title: "NFT Marketplace",
-    description:
-      "<p>Pellentesque quis justo vel dolor dictum malesuada. Aliquam id faucibus lectus.</p>",
-    images: ["https://via.placeholder.com/150x150"],
-    link: "https://google.com",
-  },
-  {
-    id: 3,
     title: "Farmacia La Mutual",
     description:
-      "<p>Nam aliquet nunc eget orci dignissim, vel venenatis justo imperdiet.</p>",
-    images: ["https://via.placeholder.com/150x150"],
-    link: "https://google.com",
+      "<p>Designed and built a user-friendly landing page with a simple form for customers to submit to a fidelity program. The landing page is mobile responsive, ensuring a seamless experience on any device. The form is optimized for faster completion, with autofill compatibility and real-time validation to prevent errors.</p><p>With clear and concise design, the form focuses on essential fields and includes a persuasive call-to-action. The landing page incentivizes form completion, inspiring users to take action and provide their information.</p><p> I also took care of building the backend and deploying the project.</p>",
+    images: [lamutual, lamutual],
+    link: "https://farmacialamutual.com.ar",
+  },
+  // {
+  //   id: 3,
+  //   title: "NFT Marketplace",
+  //   description:
+  //     "<p>Pellentesque quis justo vel dolor dictum malesuada. Aliquam id faucibus lectus.</p>",
+  //   images: ["https://via.placeholder.com/150x150"],
+  //   link: "https://google.com",
+  // },
+];
+
+export const contributedProjects = [
+  {
+    id: 1,
+    title: "El Eco de Tandil",
+    description:
+      "<p>As a Frontend developer, I contributed to a local newspaper's website using the Artic CMS, a registered trademark product designed for independent newspapers. My role involved maintaining the web page and developing new features to enhance user experience, working closely with the newspaper owner to develop the platform, ensuring it met their specific needs.</p><p>Artic CMS provides a user-friendly platform for creating and managing content, supporting various layout options and seamless integration with ad networks. My work showcases my expertise in frontend development and content management system customization, demonstrating my ability to create visually appealing and functional websites.</p>",
+    images: [eleco, eleco],
+    link: "https://www.eleco.com.ar/",
+  },
+  {
+    id: 2,
+    title: "Growpro App",
+    description:
+      "<p>As a frontend developer at GrowPro, I played a pivotal role in enhancing user experience for a platform that provides personalized guidance for individuals seeking study and work abroad opportunities.</p><p>I worked on this project as part of the frontend team, developing on scroll animations and React components to create interactive and engaging features that would improve the overall website experience.</p><p>By fostering a sense of community among participants, I contributed to the success of GrowPro's mission to support and connect people pursuing international education and work experiences.</p>",
+    images: [growpro, growpro],
+    link: "https://growproexperience.com/",
   },
 ];
 
-export const uniProjects = [
+export const collegeProjects = [
   {
     id: 1,
     title: "ImageDraw App",

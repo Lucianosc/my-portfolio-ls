@@ -10,6 +10,7 @@ import imageDraw2 from "./projects-images/imageDraw-2.avif";
 import imageDraw3 from "./projects-images/imageDraw-3.avif";
 import wildWestRunner1 from "./projects-images/wildWestRunner-1.avif";
 import wildWestRunner2 from "./projects-images/wildWestRunner-2.avif";
+import lamutual from "./projects-images/lamutual.avif";
 import techGuy from "./about-image/tech-guy.avif";
 import css3 from "./icons/css3.svg";
 import html5 from "./icons/html5.svg";
@@ -19,6 +20,8 @@ import sass from "./icons/sass.svg";
 import tailwindcss from "./icons/tailwindcss.svg";
 import logo from "./logo.svg";
 import lottieAnimation from "./lottie-animation.json";
+import growpro from "./projects-images/growpro.avif";
+import eleco from "./projects-images/eleco.avif";
 
 export {
   cuatroEnLinea1,
@@ -33,6 +36,7 @@ export {
   vetRedFigma,
   vetRedProfile,
   vetRedChat,
+  lamutual,
   techGuy,
   css3,
   html5,
@@ -42,6 +46,8 @@ export {
   tailwindcss,
   logo,
   lottieAnimation,
+  growpro,
+  eleco,
 };
 
 export { default as GitHubLogo } from "./GitHubLogo.jsx";
