@@ -32,7 +32,7 @@ export default function Projects() {
         </div>
       </div>
       <div className={`${styles["projects"]}`}>
-        <h1>Projects i contributed</h1>
+        <h1>Projects I contributed</h1>
         <div className={`${styles["projects-list"]}`}>
           {contributedProjects.map((project) => (
             <ProjectCard
