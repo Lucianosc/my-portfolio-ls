@@ -10,7 +10,7 @@
   gap: 2rem;
   flex-direction: column;
   @include lg {
-    flex-direction: row-reverse;
+    flex-direction: row;
   }
   .skills {
     width: 50%;
@@ -19,40 +19,41 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    .player {
-      max-width: 600px;
-    }
+    max-width: 460px;
+    margin: 0 auto;
     .text {
       h3 {
+        font-size: 1.75rem;
+        font-weight: normal;
         text-align: start;
         margin-top: 0;
         // margin-left: -2rem;
-        animation: slideInFromLeft 1s cubic-bezier(0.65, 0, 0.35, 1) forwards;
-        transform: translateX(-100%);
-        opacity: 0;
+        // animation: slideInFromLeft 1s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+        // transform: translateX(-100%);
+        // opacity: 0;
       }
 
-      > :nth-child(1) {
-        animation-delay: 0.5s;
-      }
+      // > :nth-child(1) {
+      //   animation-delay: 0.5s;
+      // }
 
-      > :nth-child(2) {
-        animation-delay: 0.7s;
-      }
+      // > :nth-child(2) {
+      //   animation-delay: 0.7s;
+      // }
 
-      > :nth-child(3) {
-        animation-delay: 0.9s;
-      }
-      @keyframes slideInFromLeft {
-        0% {
-          transform: translateX(-100%);
-          opacity: 0;
-        }
-        100% {
-          transform: translateX(0);
-          opacity: 1;
-        }
-      }
+      // > :nth-child(3) {
+      //   animation-delay: 0.9s;
+      // }
+      // @keyframes slideInFromLeft {
+      //   0% {
+      //     transform: translateX(-100%);
+      //     opacity: 0;
+      //   }
+      //   100% {
+      //     transform: translateX(0);
+      //     opacity: 1;
+      //   }
+      // }
     }
   }
   .graph-container {

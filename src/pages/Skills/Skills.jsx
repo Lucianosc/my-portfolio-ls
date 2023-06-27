@@ -95,25 +95,34 @@ export default function Skills() {
   return (
     <main className={`${styles["main-container"]}`}>
       <section className={`${styles["skills"]}`}>
-        {/* <div className={`${styles["text"]}`}>
-          <h3>Responsive design</h3>
-          <h3>Team oriented</h3>
-          <h3>Attention to detail</h3>
+        <div className={`${styles["text"]}`}>
+          <div>
+            <h3>Problem-solving</h3>
+            <p>
+              Self-sufficient problem solver that focuses on UX and SEO. I like
+              to create intuitive and user-friendly interfaces, while improving
+              website performance, and optimizing content for search engines.
+            </p>
+          </div>
+          <div>
+            <h3>Communication</h3>
+            <p>
+              Strong collaboration skills, working seamlessly with
+              cross-functional teams including web designers, SEO specialists,
+              and developers. Demonstrated ability to communicate project
+              requirements and exchange feedback effectively with customers.
+            </p>
+          </div>
+          <div>
+            <h3>Adaptability</h3>
+            <p>
+              Continuously update skills to stay abreast of emerging
+              technologies and industry trends. Proficient in utilizing modern
+              frameworks and technologies to deliver dynamic and scalable web
+              solutions.
+            </p>
+          </div>
         </div>
-        <div className={`${styles["player"]}`}>
-          <Player
-            ref={lottieRef}
-            onEvent={(event) => {
-              if (event === "loop") handleLottieEvent();
-            }}
-            autoplay={true}
-            loop={true}
-            controls={false}
-            src={lottieAnimation}
-            style={{ width: "100%", aspectRatio: "1/1" }}
-          ></Player>
-        </div> */}
-        <h2>Section under construction...</h2>
       </section>
       <div className={`${styles["graph-container"]}`}>
         <h2>Tech Stack</h2>
