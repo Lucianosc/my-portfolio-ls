@@ -7,7 +7,6 @@ import {
   reactjs,
   sass,
   tailwindcss,
-  lottieAnimation,
 } from "../../assets/";
 import {
   Chart as ChartJS,
@@ -19,7 +18,6 @@ import {
   Legend,
 } from "chart.js";
 import { Radar } from "react-chartjs-2";
-import { Player } from "@lottiefiles/react-lottie-player";
 
 ChartJS.register(
   RadialLinearScale,
@@ -80,18 +78,6 @@ export const RadarOptions = {
 };
 
 export default function Skills() {
-  const lottieRef = useRef();
-
-  const handleLottieEvent = () => {
-    if (lottieRef?.current.state.instance.playDirection == 1) {
-      lottieRef.current.setPlayerDirection(-1);
-      lottieRef.current.setSeeker(90, true);
-    } else {
-      lottieRef.current.setPlayerDirection(1);
-      lottieRef.current.setSeeker(0, true);
-    }
-  };
-
   return (
     <main className={`${styles["main-container"]}`}>
       <section className={`${styles["skills"]}`}>

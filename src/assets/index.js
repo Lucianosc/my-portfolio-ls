@@ -19,7 +19,6 @@ import reactjs from "./icons/reactjs.svg";
 import sass from "./icons/sass.svg";
 import tailwindcss from "./icons/tailwindcss.svg";
 import logo from "./logo.svg";
-import lottieAnimation from "./lottie-animation.json";
 import growpro from "./projects-images/growpro.avif";
 import eleco from "./projects-images/eleco.avif";
 
@@ -45,7 +44,6 @@ export {
   sass,
   tailwindcss,
   logo,
-  lottieAnimation,
   growpro,
   eleco,
 };
