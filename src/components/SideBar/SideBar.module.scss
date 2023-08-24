@@ -18,8 +18,8 @@ nav {
     .hamburger-container {
       button {
         position: fixed;
-        top: 10px;
-        right: 10px;
+        top: 26.8px;
+        right: 16px;
         width: 50px;
         height: 50px;
         background-color: rgba(0, 0, 0, 0.3);
@@ -34,8 +34,12 @@ nav {
         justify-content: center;
         border-radius: 3px;
         color: white;
-        background-color: transparent;
+        background-color: var(--color-background2);
         border: none;
+        @include md {
+          top: 36px;
+          right: 32px;
+        }
       }
     }
   }
@@ -68,7 +72,7 @@ nav {
       padding: 1rem;
       div {
         box-sizing: border-box;
-        max-width: 180px;
+        max-width: 140px;
         width: 100%;
         a {
           display: block;
