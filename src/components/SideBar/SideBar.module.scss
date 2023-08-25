@@ -72,9 +72,9 @@ nav {
       padding: 1rem;
       div {
         box-sizing: border-box;
-        padding: 3rem 3rem 0 3rem;
+        padding: 2rem 2rem 0 2rem;
         @include lg {
-          padding: 1rem 1rem 0 1rem;
+          padding: 1rem 0 0 0;
         }
         width: 100%;
         a {
