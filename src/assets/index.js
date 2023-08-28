@@ -53,3 +53,4 @@ export { default as LinkedInLogo } from "./LinkedInLogo.jsx";
 export { default as HamburgerMenu } from "./HamburgerMenu.jsx";
 export { default as CloseIcon } from "./CloseIcon.jsx";
 export { default as Spin } from "./spin.jsx";
+export { default as Check } from "./Check.jsx";

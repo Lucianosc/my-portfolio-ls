@@ -7,6 +7,7 @@ import {
   reactjs,
   sass,
   tailwindcss,
+  Check,
 } from "../../assets/";
 import {
   Chart as ChartJS,
@@ -76,14 +77,17 @@ export const RadarOptions = {
     },
   },
 };
-
+console.log(styles.check);
 export default function Skills() {
   return (
     <main className={`${styles["main-container"]}`}>
       <section className={`${styles["skills"]}`}>
         <div className={`${styles["text"]}`}>
           <div>
-            <h3>Problem-solving</h3>
+            <h3>
+              <Check styles={styles.check} />
+              Problem-solving
+            </h3>
             <p>
               Self-sufficient problem solver that focuses on UX and SEO. I like
               to create intuitive and user-friendly interfaces, while improving
@@ -91,7 +95,10 @@ export default function Skills() {
             </p>
           </div>
           <div>
-            <h3>Communication</h3>
+            <h3>
+              <Check styles={styles.check} />
+              Communication
+            </h3>
             <p>
               Strong collaboration skills, working seamlessly with
               cross-functional teams including web designers, SEO specialists,
@@ -100,7 +107,10 @@ export default function Skills() {
             </p>
           </div>
           <div>
-            <h3>Adaptability</h3>
+            <h3>
+              <Check styles={styles.check} />
+              Adaptability
+            </h3>
             <p>
               Continuously update skills to stay abreast of emerging
               technologies and industry trends. Proficient in utilizing modern
