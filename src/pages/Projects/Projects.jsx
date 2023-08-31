@@ -20,7 +20,7 @@ export default function Projects() {
   return (
     <main className={`${styles["main-container"]}`}>
       <div className={`${styles["projects"]}`}>
-        <h1>Projects</h1>
+        <h1>Personal Projects</h1>
         <div className={`${styles["projects-list"]}`}>
           {projects.map((project) => (
             <ProjectCard
@@ -32,7 +32,7 @@ export default function Projects() {
         </div>
       </div>
       <div className={`${styles["projects"]}`}>
-        <h1>Projects I contributed</h1>
+        <h1>Projects I was involved</h1>
         <div className={`${styles["projects-list"]}`}>
           {contributedProjects.map((project) => (
             <ProjectCard

@@ -14,17 +14,11 @@ import {
   lamutual,
   growpro,
   eleco,
+  veritrust,
+  veritrust2,
 } from "../assets";
 
 export const projects = [
-  {
-    id: 1,
-    title: "Crowdfunding App",
-    description:
-      "<p>Crowdfunding web 3 application that operates on the Ethereum Goerli testnet and facilitates the creation and funding of campaigns through smart contract interaction. It offers a seamless experience for users seeking blockchain-based fundraising opportunities. Users can effortlessly create campaigns, set funding goals and deadlines, and receive donations. Visibility into the latest projects seeking funding is provided by allowing users to view all ongoing campaigns within the smart contract. Additionally, users can access a personalized view of their own campaigns, enabling efficient campaign management.</p><p>This user-friendly crowdfunding web 3 app revolutionizes fundraising with blockchain, ensuring secure transactions. It offers a seamless experience with a customizable UI featuring dark and light modes. It showcases transparent and efficient fundraising, compatible with Ethereum Goerli testnet.</p>",
-    images: [crowdfunding1, crowdfunding2],
-    link: "https://crowdfundmeapp.netlify.app/",
-  },
   {
     id: 2,
     title: "Farmacia La Mutual",
@@ -33,24 +27,24 @@ export const projects = [
     images: [lamutual, lamutual],
     link: "https://farmacialamutual.com.ar",
   },
-  // {
-  //   id: 3,
-  //   title: "NFT Marketplace",
-  //   description:
-  //     "<p>Pellentesque quis justo vel dolor dictum malesuada. Aliquam id faucibus lectus.</p>",
-  //   images: ["https://via.placeholder.com/150x150"],
-  //   link: "https://google.com",
-  // },
+  {
+    id: 3,
+    title: "Crowdfunding App",
+    description:
+      "<p>Crowdfunding web 3 application that operates on the Ethereum Goerli testnet and facilitates the creation and funding of campaigns through smart contract interaction. It offers a seamless experience for users seeking blockchain-based fundraising opportunities. Users can effortlessly create campaigns, set funding goals and deadlines, and receive donations. Visibility into the latest projects seeking funding is provided by allowing users to view all ongoing campaigns within the smart contract. Additionally, users can access a personalized view of their own campaigns, enabling efficient campaign management.</p><p>This user-friendly crowdfunding web 3 app revolutionizes fundraising with blockchain, ensuring secure transactions. It offers a seamless experience with a customizable UI featuring dark and light modes. It showcases transparent and efficient fundraising, compatible with Ethereum Goerli testnet.</p>",
+    images: [crowdfunding1, crowdfunding2],
+    link: "https://crowdfundmeapp.netlify.app/",
+  },
 ];
 
 export const contributedProjects = [
   {
     id: 1,
-    title: "El Eco de Tandil",
+    title: "VeriTrust Protocol",
     description:
-      "<p>As a Frontend developer, I contributed to a local newspaper's website using the Artic CMS, a registered trademark product designed for independent newspapers. My role involved maintaining the web page and developing new features to enhance user experience, working closely with the newspaper owner to develop the platform, ensuring it met their specific needs.</p><p>Artic CMS provides a user-friendly platform for creating and managing content, supporting various layout options and seamless integration with ad networks. My work showcases my expertise in frontend development and content management system customization, demonstrating my ability to create visually appealing and functional websites.</p>",
-    images: [eleco, eleco],
-    link: "https://www.eleco.com.ar/",
+      "<p>This project is a Web 3 application that operates on the Ethereum blockchain, designed to revolutionize the management of public tenders. Built as part of the Ethereum Argentina 2023 Buildathon, VeriTrust emerged as the winner of the Public Goods track. This award-winning project showcases the power of blockchain in facilitating transparent and efficient public tender processes.</p><p>VeriTrust leverages smart contract interactions to facilitate the complete tendering process. Users can effortlessly create tenders, set transparency goals, and receive bids. The protocol provides visibility into all active tenders within the smart contract, promoting total transparency and public scrutiny. Additionally, users can access a personalized view of their own tenders, enabling efficient tender management.</p>",
+    images: [veritrust, veritrust2],
+    link: "https://veritrust-front-qj44in647a-uc.a.run.app/",
   },
   {
     id: 2,
@@ -59,6 +53,14 @@ export const contributedProjects = [
       "<p>As a frontend developer at GrowPro, I played a pivotal role in enhancing user experience for a platform that provides personalized guidance for individuals seeking study and work abroad opportunities.</p><p>I worked on this project as part of the frontend team, developing on scroll animations and React components to create interactive and engaging features that would improve the overall website experience.</p><p>By fostering a sense of community among participants, I contributed to the success of GrowPro's mission to support and connect people pursuing international education and work experiences.</p>",
     images: [growpro, growpro],
     link: "https://growproexperience.com/",
+  },
+  {
+    id: 3,
+    title: "El Eco de Tandil",
+    description:
+      "<p>As a Frontend developer, I contributed to a local newspaper's website using the Artic CMS, a registered trademark product designed for independent newspapers. My role involved maintaining the web page and developing new features to enhance user experience, working closely with the newspaper owner to develop the platform, ensuring it met their specific needs.</p><p>Artic CMS provides a user-friendly platform for creating and managing content, supporting various layout options and seamless integration with ad networks. My work showcases my expertise in frontend development and content management system customization, demonstrating my ability to create visually appealing and functional websites.</p>",
+    images: [eleco, eleco],
+    link: "https://www.eleco.com.ar/",
   },
 ];
 
