@@ -19,7 +19,7 @@
     div {
       transform: translateX(-110%);
       transition: all ease-in-out 0.1s;
-      z-index: 5;
+      z-index: 3;
       display: flex;
       background-color: whitesmoke;
       border-radius: 5rem;
@@ -46,7 +46,7 @@
   }
 
   &:hover button {
-    z-index: 5;
+    z-index: 3;
     transform: scale(1);
   }
 
@@ -90,7 +90,7 @@
       transform: translateX(0);
     }
     button {
-      z-index: 5;
+      z-index: 3;
       transform: scale(1);
     }
   }
