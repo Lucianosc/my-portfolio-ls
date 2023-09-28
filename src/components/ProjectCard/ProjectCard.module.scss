@@ -6,14 +6,50 @@
   aspect-ratio: 16/10;
   overflow: hidden;
   cursor: pointer;
-  &:hover img {
+  &:hover .main_img {
     transform: scale(1.1);
-    filter: brightness(110%);
   }
+  .tags {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 0.5rem;
+    div {
+      transform: translateX(-110%);
+      transition: all ease-in-out 0.1s;
+      z-index: 5;
+      display: flex;
+      background-color: whitesmoke;
+      border-radius: 5rem;
+      width: fit-content;
+      padding: 0.25rem 0.75rem;
+      p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        color: var(--color-background);
+        margin-left: 0.5rem;
+        font-size: 1rem;
+      }
+      img {
+        height: 30px;
+        width: 30px;
+        background-color: transparent;
+      }
+    }
+  }
+  &:hover .tags > div {
+    transform: translateX(0);
+  }
+
   &:hover button {
     z-index: 5;
     transform: scale(1);
   }
+
   button {
     border-radius: 100%;
     height: 100px;
@@ -45,5 +81,17 @@
     object-fit: cover;
     transition: all ease-in-out 0.3s;
     filter: brightness(80%);
+  }
+  @include mob-lg {
+    .main_img {
+      transform: scale(1.1);
+    }
+    .tags > div {
+      transform: translateX(0);
+    }
+    button {
+      z-index: 5;
+      transform: scale(1);
+    }
   }
 }

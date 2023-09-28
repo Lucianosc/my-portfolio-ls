@@ -17,6 +17,7 @@ nav {
     }
     .hamburger-container {
       button {
+        cursor: pointer;
         position: fixed;
         top: 26.8px;
         right: 16px;
@@ -33,7 +34,7 @@ nav {
         -ms-flex-pack: center;
         justify-content: center;
         border-radius: 3px;
-        color: white;
+        color: whitesmoke;
         background-color: var(--color-background2);
         border: none;
         @include md {
