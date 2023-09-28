@@ -51,7 +51,7 @@ export const RadarOptions = {
       display: false,
       labels: {
         font: { size: 18, family: "Montserrat", weight: 500 },
-        color: "white",
+        color: "whitesmoke",
       },
     },
   },
@@ -66,7 +66,7 @@ export const RadarOptions = {
         color: "rgba(144, 144, 150, 0.2)",
       },
       pointLabels: {
-        color: "white",
+        color: "whitesmoke",
         font: { size: 14, family: "Montserrat", weight: 400 },
       },
       ticks: {
@@ -77,7 +77,6 @@ export const RadarOptions = {
     },
   },
 };
-console.log(styles.check);
 export default function Skills() {
   return (
     <main className={`${styles["main-container"]}`}>

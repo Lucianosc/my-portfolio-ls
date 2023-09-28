@@ -27,3 +27,11 @@
     @content;
   }
 }
+
+//desktop first
+//large
+@mixin mob-lg {
+  @media (max-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
