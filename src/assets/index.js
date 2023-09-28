@@ -23,6 +23,8 @@ import growpro from "./projects-images/growpro.avif";
 import eleco from "./projects-images/eleco.avif";
 import veritrust from "./projects-images/VeriTrust.avif";
 import veritrust2 from "./projects-images/VeriTrust-2.avif";
+import nextjs from "./icons/next.svg";
+import figma from "./icons/figma.svg";
 
 export {
   cuatroEnLinea1,
@@ -50,6 +52,8 @@ export {
   eleco,
   veritrust,
   veritrust2,
+  nextjs,
+  figma,
 };
 
 export { default as GitHubLogo } from "./GitHubLogo.jsx";
