@@ -1,5 +1,6 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import styles from "./Skills.module.scss";
+
 import {
   css3,
   html5,
@@ -7,8 +8,10 @@ import {
   reactjs,
   sass,
   tailwindcss,
-  Check,
-} from "../../assets/";
+  nextjs,
+  figma,
+} from "../../constants/techIcons";
+
 import {
   Chart as ChartJS,
   RadialLinearScale,
@@ -18,7 +21,11 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import { Radar } from "react-chartjs-2";
+
+import { Radar, getElementsAtEvent } from "react-chartjs-2";
+import { Check } from "../../assets";
+
+const techIcons = [css3, html5, javascript, reactjs, sass, tailwindcss];
 
 ChartJS.register(
   RadialLinearScale,
@@ -30,7 +37,14 @@ ChartJS.register(
 );
 
 export const RadarData = {
-  labels: ["Javascript", "React", "HTML", "Tailwindcss", "Sass", "CSS"],
+  labels: [
+    javascript.alt,
+    reactjs.alt,
+    html5.alt,
+    tailwindcss.alt,
+    sass.alt,
+    css3.alt,
+  ],
   datasets: [
     {
       label: "Tech stack",
@@ -67,7 +81,7 @@ export const RadarOptions = {
       },
       pointLabels: {
         color: "whitesmoke",
-        font: { size: 14, family: "Montserrat", weight: 400 },
+        font: { size: 16, family: "Montserrat", weight: 400 },
       },
       ticks: {
         count: 5,
@@ -77,7 +91,13 @@ export const RadarOptions = {
     },
   },
 };
+
 export default function Skills() {
+  // const chartRef = useRef();
+  // const onMouseOver = (event) => {
+  //   console.log(getElementsAtEvent(chartRef.current, event));
+  // };
+
   return (
     <main className={`${styles["main-container"]}`}>
       <section className={`${styles["skills"]}`}>
@@ -122,15 +142,19 @@ export default function Skills() {
       <div className={`${styles["graph-container"]}`}>
         <h2>Tech Stack</h2>
         <div className={`${styles["radar-container"]}`}>
-          <Radar data={RadarData} options={RadarOptions} />
+          <Radar
+            data={RadarData}
+            options={RadarOptions}
+            // onMouseOver={onMouseOver}
+            // ref={chartRef}
+          />
         </div>
         <div className={`${styles["tech-stack"]}`}>
-          <img src={css3} alt="css3" />
-          <img src={html5} alt="html5" />
-          <img src={javascript} alt="javascript" />
-          <img src={reactjs} alt="reactjs" />
-          <img src={sass} alt="sass" />
-          <img src={tailwindcss} alt="tailwindcss" />
+          {techIcons.map(({ src, alt }, index) => (
+            <div>
+              <img key={index} src={src} alt={alt} />
+            </div>
+          ))}
         </div>
       </div>
     </main>

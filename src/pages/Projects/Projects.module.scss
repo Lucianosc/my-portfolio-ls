@@ -2,7 +2,6 @@
 
 .main-container {
   background-color: var(--color-background3);
-
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -10,6 +9,15 @@
   align-items: center;
   gap: 2rem;
   padding: 0 1rem;
+
+  @media screen and (max-width: 450px) {
+    & > :first-child {
+      h1 {
+        max-width: 80vw;
+      }
+    }
+  }
+
   @include md {
     padding: 0 2rem;
   }
